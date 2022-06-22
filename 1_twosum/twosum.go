@@ -1,0 +1,22 @@
+package twosum
+
+// TwoSum 两数之和，小于On^2
+// func TwoSum(nums []int, target int) []int {
+// 	for i := 0; i < len(nums); i++ {
+
+// 	}
+// 	return nil
+// }
+
+// TwoSum 两数之和，On^2
+func TwoSum(nums []int, target int) []int {
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i]+nums[j] == target {
+				var result = []int{i, j}
+				return result
+			}
+		}
+	}
+	return nil
+}
